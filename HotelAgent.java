@@ -11,12 +11,12 @@ public class HotelAgent extends Agent {
     private int availableRooms;
 
     protected void setup() {
-        // Initialiser les attributs de l'agent hôtel
-        String hotelName = "AYOUB CLUB";
+        // Initialiser les attributs de l'agent hÃ´tel
+        String hotelName = "AYOUB HOTEL";
         String hotelAddress = "RN5, Ath Mansour 1001 , Mch'dallah , Bouira,Algerie";
         int availableRooms = 10;
 
-        // Ajouter un comportement pour traiter les demandes de réservation
+        // Ajouter un comportement pour traiter les demandes de rÃ©servation
         addBehaviour(new ReservationBehaviour());
     }
 
@@ -24,7 +24,7 @@ public class HotelAgent extends Agent {
         public void action() {
             ACLMessage msg = receive();
             if (msg != null) {
-                // Traiter la demande de réservation du client
+                // Traiter la demande de rÃ©servation du client
                 int requestedRooms = Integer.parseInt(msg.getContent());
                 ACLMessage reply = msg.createReply();
 
